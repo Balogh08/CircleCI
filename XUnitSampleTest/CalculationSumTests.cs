@@ -39,5 +39,18 @@ namespace XUnitSampleTest
             //assert  
             Assert.NotEqual(expectedResult, realResult);
         }
+
+        [Fact]
+        public void CalculateSum_NegativeResult_True()
+        {
+            var calculate = new Calculation();
+            double num1 = 10;
+            double num2 = -20;
+            double expectedResult = -10;
+
+            var realResult = calculate.SumTwoNumbers(num1, num2);
+
+            Assert.Equal(expectedResult, realResult);
+        }
     }
 }
