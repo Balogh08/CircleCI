@@ -9,8 +9,13 @@ namespace NetCoreCalculator.Business
     /// <summary>
     /// Calculates mathematics formulas
     /// </summary>
-    public static class Calculation
+    public class Calculation
     {
+        public double SumTwoNumbers(double numberOne, double numberTwo)
+        {
+            return numberOne + numberTwo;
+        }
+
         /// <summary>
         /// Calculates the compound interest based in a given model
         /// Formula: A = P (1 + r) (n)
