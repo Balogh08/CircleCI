@@ -9,13 +9,14 @@ using Xunit;
 
 namespace NetCoreCalculator.IntegrationTests.Scenarios
 {
+    [Collection("BaseCollection")]
     public class HomeControllerTest
     {
         private readonly TestContext testContext;
 
-        public HomeControllerTest()
+        public HomeControllerTest(TestContext testContext)
         {
-            this.testContext = new TestContext();
+            this.testContext = testContext;
         }
 
         [Fact]
