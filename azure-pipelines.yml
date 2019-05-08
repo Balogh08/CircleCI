@@ -6,6 +6,13 @@
 trigger:
 - master
 
+jobs:
+- job: Windows
+  pool:
+    vmImage: 'windows-2019'
+  steps:
+  - script: echo hello from Windows
+
 pool:
   vmImage: 'Ubuntu-16.04'
 
@@ -26,3 +33,4 @@ steps:
     command: test
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
+
