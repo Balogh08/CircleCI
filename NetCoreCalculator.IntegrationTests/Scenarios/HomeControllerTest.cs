@@ -19,7 +19,7 @@ namespace NetCoreCalculator.IntegrationTests.Scenarios
         [Fact]
         public async Task HomeController_Get_Return200()
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, "/index");
+            var request = new HttpRequestMessage(HttpMethod.Get, "");
             var response = await testContext.Client.SendAsync(request);
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }

@@ -11,7 +11,7 @@ namespace NetCoreCalculator.Controllers
 {
     public class HomeController : Controller
     {
-        [HttpGet("/index")]
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
