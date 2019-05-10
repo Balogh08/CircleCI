@@ -56,5 +56,17 @@ namespace XUnitSampleTest
 
             Assert.Equal(expectedResult, realResult);
         }
+
+        [Fact]
+        public void CalculateSum_Zero_True()
+        {
+            double num1 = 0;
+            double num2 = 0;
+            double expectedResult = 0;
+
+            var realResult = calculation.SumTwoNumbers(num1, num2);
+
+            Assert.Equal(expectedResult, realResult);
+        }
     }
 }
