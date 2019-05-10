@@ -68,5 +68,17 @@ namespace XUnitSampleTest
 
             Assert.Equal(expectedResult, realResult);
         }
+
+        [Fact]
+        public void CalculateSum_100plus100_True()
+        {
+            double num1 = 100;
+            double num2 = 100;
+            double expectedResult = 200;
+
+            var realResult = calculation.SumTwoNumbers(num1, num2);
+
+            Assert.Equal(expectedResult, realResult);
+        }
     }
 }
