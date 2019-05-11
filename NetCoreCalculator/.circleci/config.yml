@@ -1,16 +1,13 @@
 ﻿version: 2
 jobs:
   build:
+    working_directory: /temp
     docker:
-      - image: debian:stretch
-
+      - image: microsoft/dotnet:sdk
+    environment:
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+      DOTNET_CLI_TELEMETRY_OPTOUT: 1
     steps:
       - checkout
-
-      - run:
-          name: Greeting
-          command: echo Hello, world.
-
-      - run:
-          name: Print the Current Time
-          command: date
+      - run: dotnet restore
+      - run: dotnet build
