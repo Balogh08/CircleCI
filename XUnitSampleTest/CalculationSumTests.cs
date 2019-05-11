@@ -68,6 +68,7 @@ namespace XUnitSampleTest
 
             Assert.Equal(expectedResult, realResult);
         }
+<<<<<<< Updated upstream
 
         [Fact]
         public void CalculateSum_100plus100_True()
@@ -92,5 +93,7 @@ namespace XUnitSampleTest
 
             Assert.Equal(expectedResult, realResult);
         }
+=======
+>>>>>>> Stashed changes
     }
 }
